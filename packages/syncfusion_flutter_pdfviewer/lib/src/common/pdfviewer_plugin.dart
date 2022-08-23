@@ -151,9 +151,6 @@ class PdfViewerPlugin {
   /// Dispose the rendered pages
   Future<void> closeDocument() async {
     imageCache.clear();
-    if (_documentID != null) {
-      await PdfViewerPlatform.instance.closeDocument(_documentID!);
-    }
     _pageCount = 0;
     _originalWidth = null;
     _originalHeight = null;
